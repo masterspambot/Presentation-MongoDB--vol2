@@ -193,6 +193,7 @@
     <li>Optimizing storage capacity</li>
   </ul>
 </section>
+
 <section>
   <h2>Genegal example</h2>
   <img src="img/sharding_example.png"/>
@@ -205,6 +206,7 @@
     <li>shard - a single mongod instance or replica set</li>
   </ul>
 </section>
+
 <section>
   <h2>Sharding architecture</h2>
   <img src="img/sharding.png"/>
@@ -222,24 +224,27 @@
     </ul>
   </ul>
 </section>
+
 <section>
   <h2>Considerations when selecting shard key</h2>
   <ul>
-      <li>When using <b>range based</b> shard keys:</li>
-      <ul>
-        <li>could result in uneven distribution (don't use <i>ObjectId</i> values or timestamps)</li>
-        <li>easy to determine shards on range queries</li>
-      </ul>
-      <li>When using <b>hash based</b> shard keys:</li>
-      <ul>
-        <li>good to use <i>ObjectId</i> values or timestamps</li>
-        <li>range queries would me more likley query every shard</li>
-      </ul>
+    <li>When using <b>range based</b> shard keys:</li>
+    <ul>
+      <li>could result in uneven distribution (don't use <i>ObjectId</i> values or timestamps)</li>
+      <li>easy to determine shards on range queries</li>
+    </ul>
+    <li>When using <b>hash based</b> shard keys:</li>
+    <ul>
+      <li>good to use <i>ObjectId</i> values or timestamps</li>
+      <li>range queries would me more likley query every shard</li>
+    </ul>
   </ul>
 </section>
+
 <section>
   <section>
     <h2>Splitting example</h2>
+
     <h3>Range based sharding</h3>
     <img src="img/shard_key.png">
     <small><i>numInitialChunks</i> equals to 1</small>
@@ -254,6 +259,7 @@
     <img src="img/shard_key3.png">
   </section>
 </section>
+
 <section>
   <section>
     <h2>Balancing example</h2>
@@ -264,82 +270,6 @@
     <h2>After balancing process</h2>
     <img src="img/balancing_2.png">
   </section>
-</section>
-<section>
-  <h2 style="margin-bottom: 40px;">MongoDB has many strong points...</h2>
-  <figure style="width: 30%; margin-left: 10px; margin-right: 10px;"><img style="width: 150px;"
-                                                                          src="img/companies.png">
-    <figcaption>Mature and well tested solution</figcaption>
-  </figure>
-  <figure style="width: 30%; margin-left: 10px; margin-right: 10px;"><img style="width: 150px;"
-                                                                          src="img/hourglass.png">
-    <figcaption>Really easy to start working with</figcaption>
-  </figure>
-  <figure style="width: 30%; margin-left: 10px; margin-right: 10px;"><img style="width: 150px;"
-                                                                          src="img/coins.png">
-    <figcaption>Cheaper than competitor's solution</figcaption>
-  </figure>
-</section>
-
-<section>
-  <h2 style="margin-bottom: 40px;">Has huge driver support...</h2>
-  <figure><img src="img/C-logo.png">
-    <figcaption>C</figcaption>
-  </figure>
-  <figure><img src="img/c++-logo.png">
-    <figcaption>C++</figcaption>
-  </figure>
-  <figure><img src="img/Csharp-logo.png">
-    <figcaption>C#</figcaption>
-  </figure>
-  <figure><img src="img/erlang-logo.png">
-    <figcaption>Erlang</figcaption>
-  </figure>
-  <figure><img src="img/Haskell-logo.png">
-    <figcaption>Haskell</figcaption>
-  </figure>
-  <figure><img src="img/java-logo.png">
-    <figcaption>Java</figcaption>
-  </figure>
-  <figure><img src="img/node-logo.png">
-    <figcaption>NodeJS</figcaption>
-  </figure>
-  <figure><img src="img/php_logo.png">
-    <figcaption>PHP</figcaption>
-  </figure>
-  <figure><img src="img/perl_logo.png">
-    <figcaption>Perl</figcaption>
-  </figure>
-  <figure><img src="img/python-logo.png">
-    <figcaption>Python</figcaption>
-  </figure>
-  <figure><img src="img/ruby_logo.png">
-    <figcaption>Ruby</figcaption>
-  </figure>
-  <figure><img src="img/scala-logo.png">
-    <figcaption>Scala</figcaption>
-  </figure>
-  <p>
-    <q class="definition fragment roll-in">
-      <small>*And 23 other community-supported drivers</small>
-    </q>
-  </p>
-</section>
-
-<section>
-  <h2 style="margin-bottom: 40px;">And big companies are using it.</h2>
-  <figure><img src="img/behance-logo.png"></figure>
-  <figure><img src="img/cisco-logo.png"></figure>
-  <figure><img src="img/craigslist-logo.png"></figure>
-  <figure><img src="img/disney.png"></figure>
-  <figure><img src="img/forbes-logo.png"></figure>
-  <figure><img src="img/foursquare-logo.png"></figure>
-  <figure><img src="img/ign-logo.png"></figure>
-  <figure><img src="img/guardian-logo.png"></figure>
-  <figure><img src="img/New-York-Times-Logo1.png"></figure>
-  <figure><img src="img/O2-logo.png"></figure>
-  <figure><img src="img/SAP-Logo.png"></figure>
-  <figure><img src="img/github-logo.png"></figure>
 </section>
 
 <section>
