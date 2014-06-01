@@ -190,7 +190,19 @@
     <li>Partitioning the data</li>
     <li>Auto-balancing</li>
     <li>Scale write throughput</li>
-    <li>Optimize storage capacity</li>
+    <li>Optimizing storage capacity</li>
+  </ul>
+</section>
+<section>
+  <h2>Genegal example</h2>
+  <img src="img/sharding_example.png"/>
+</section>
+<section>
+  <h2>Sharded cluster components</h2>
+  <ul>
+    <li>mongos - router communicating with shards</li>
+    <li>config server - stores configuration, chunks list, locks, etc.</li>
+    <li>shard - a single mongod instance or replica set</li>
   </ul>
 </section>
 <section>
