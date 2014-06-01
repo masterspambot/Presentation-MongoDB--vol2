@@ -194,10 +194,65 @@
   </ul>
 </section>
 <section>
-  <h2>Simple sharding example</h2>
-  <img src="img/shard.png">
+  <h2>Sharding architecture</h2>
+  <img src="img/sharding.png"/>
 </section>
-
+<section>
+  <h2>Shard key</h2>
+  <ul>
+    <li>Determines placement of a document in specific shard</li>
+    <li>Utilize one or many fields</li>
+    <li>Uses mongo indexes</li>
+    <li>Two kinks of shard keys:</li>
+    <ul>
+      <li>range based</li>
+      <li>hash based</li>
+    </ul>
+  </ul>
+</section>
+<section>
+  <h2>Considerations when selecting shard key</h2>
+  <ul>
+      <li>When using <b>range based</b> shard keys:</li>
+      <ul>
+        <li>could result in uneven distribution (don't use <i>ObjectId</i> values or timestamps)</li>
+        <li>easy to determine shards on range queries</li>
+      </ul>
+      <li>When using <b>hash based</b> shard keys:</li>
+      <ul>
+        <li>good to use <i>ObjectId</i> values or timestamps</li>
+        <li>range queries would me more likley query every shard</li>
+      </ul>
+  </ul>
+</section>
+<section>
+  <section>
+    <h2>Splitting example</h2>
+    <h3>Range based sharding</h3>
+    <img src="img/shard_key.png">
+    <small><i>numInitialChunks</i> equals to 1</small>
+  </section>
+  <section>
+    <h2>Creating new chunk</h2>
+    <img src="img/shard_key2.png">
+    <small>chunksize equals to 1 [MB]</small>
+  </section>
+  <section>
+    <h2>Creating new chunk</h2>
+    <img src="img/shard_key3.png">
+  </section>
+</section>
+<section>
+  <section>
+    <h2>Balancing example</h2>
+    <img src="img/balancing_1.png">
+    <small>migration threshold = 2</small>
+  </section>
+  <section>
+    <h2>After balancing process</h2>
+    <img src="img/balancing_2.png">
+  </section>
+</section>
 <section>
   <h2 style="margin-bottom: 40px;">MongoDB has many strong points...</h2>
   <figure style="width: 30%; margin-left: 10px; margin-right: 10px;"><img style="width: 150px;"
