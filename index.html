@@ -183,6 +183,66 @@
 </section>
 
 <section>
+  <section>
+    <img src="img/management.png"/>
+
+    <h2>Replica set members</h2>
+    <p>Synchronised instances possessing the same data sets</p>
+  </section>
+
+  <section>
+    <img src="img/admin.png"/>
+
+    <h2>Primary Member</h2>
+
+    <p>The only member in the replica set that receives write operations</p>
+  </section>
+
+  <section>
+    <img src="img/user.png"/>
+
+    <h2>Secondary Member</h2>
+
+    <p>Replicate the primary’s oplog and apply the operations to their data sets</p>
+  </section>
+
+  <section>
+    <img src="img/safety_box.png"/>
+
+    <h2>0 Priority Member</h2>
+
+    <p>Can't become the primary in an election</p>
+  </section>
+
+  <section>
+    <img src="img/cancel.png"/>
+
+    <h2>Hidden Member</h2>
+
+    <p>DBMS doesn't allow read from this member</p>
+  </section>
+
+  <section>
+    <img src="img/clock.png"/>
+
+    <h2>Delayed Member</h2>
+
+    <p>Has time-shifted optlog to be used to recovery snapshots from certain errors</p>
+  </section>
+
+  <section>
+    <img src="img/radio_microphone.png"/>
+
+    <h2>Arbiter</h2>
+    <ul>
+      <li>Doesn't store any data</li>
+      <li>Can't become the primary member</li>
+      <li>Resolves the problem of tied elections</li>
+    </ul>
+  </section>
+</section>
+
+<section>
   <img src="img/scissors.png"/>
 
   <h2>Sharding</h2>
