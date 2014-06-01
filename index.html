@@ -191,6 +191,7 @@
 <section>
   <section>
     <img src="img/hourglass.png"/>
+
     <h2>Elections</h2>
     <ul>
       <p>Determine which member will become primary based on:</p>
@@ -315,10 +316,12 @@
     <li>Utilize one or many fields</li>
     <li>Uses mongo indexes</li>
     <li>Two kinks of shard keys:</li>
-    <ul>
-      <li>range based</li>
-      <li>hash based</li>
-    </ul>
+    <li>
+      <ul>
+        <li>range based</li>
+        <li>hash based</li>
+      </ul>
+    </li>
   </ul>
 </section>
 
@@ -326,15 +329,19 @@
   <h2>Considerations when selecting shard key</h2>
   <ul>
     <li>When using <b>range based</b> shard keys:</li>
-    <ul>
-      <li>could result in uneven distribution (don't use <i>ObjectId</i> values or timestamps)</li>
-      <li>easy to determine shards on range queries</li>
-    </ul>
+    <li>
+      <ul>
+        <li>could result in uneven distribution (don't use <i>ObjectId</i> values or timestamps)</li>
+        <li>easy to determine shards on range queries</li>
+      </ul>
+    </li>
     <li>When using <b>hash based</b> shard keys:</li>
-    <ul>
-      <li>good to use <i>ObjectId</i> values or timestamps</li>
-      <li>range queries would me more likley query every shard</li>
-    </ul>
+    <li>
+      <ul>
+        <li>good to use <i>ObjectId</i> values or timestamps</li>
+        <li>range queries would me more likley query every shard</li>
+      </ul>
+    </li>
   </ul>
 </section>
 
@@ -371,9 +378,9 @@
 
 <section>
   <h1>Thanks you for your attention</h1>
-  </br>
+  <br/>
   <p>You can find the sides on my blog:</p>
-  <a href="http:codefedonarts.com">www.codefedonarts.com</a>
+  <a href="http://codefedonarts.com">www.codefedonarts.com</a>
 </section>
 </div>
 
