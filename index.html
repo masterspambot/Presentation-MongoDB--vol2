@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>MongoDB - Introduction to sharding and replication</title>
+  <title>MongoDB - sharding & replication</title>
 
   <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
   <meta name="author" content="Hakim El Hattab">
@@ -42,7 +42,7 @@
 
   <h1>MongoDB</h1>
 
-  <h3>Introduction to sharding and replication</h3>
+  <h3>Sharding and replication</h3>
   <br/>
 
   <p>
@@ -115,18 +115,24 @@
   </section>
 
   <section>
-
-    <h2>Main feauters of replication</h2>
+    <h2>Main features</h2>
     <ul>
-      <li>Acychronous</li>
+      <li>Asynchronous</li>
       <li>Single-Primary (NOT Master-Master)</li>
       <li>Statement-Based AND Binary-Based</li>
       <li>Majority election</li>
-      <li>Automatic failover mechanisms</li>
+      <li>Automatic fail-over mechanisms</li>
       <li>Automatic node recovery mechanisms</li>
     </ul>
   </section>
+  <section>
+    <h2>Architecture of replication</h2>
+    <br/>
+    <img src="img/replica-set.png"/>
+  </section>
+</section>
 
+<section>
   <section>
     <h2>Working replica set</h2>
     <img src="img/com.png"/>
@@ -175,7 +181,7 @@
     <pre><code data-trim>
       --oplogSize &lt;value&gt;
     </code></pre>
-    <p>Specifies a maximum size in megabytes for the replication operation log</p>
+    <p>Specifies a maximum size in megabytes for the operation log</p>
     <q class="definition">
       <small>By default 5% of disk size. Specifies the delay of instances syncing</small>
     </q>
@@ -184,9 +190,40 @@
 
 <section>
   <section>
+    <img src="img/hourglass.png"/>
+    <h2>Elections</h2>
+    <ul>
+      <p>Determine which member will become primary based on:</p>
+      <li>priority</li>
+      <li>number of votes</li>
+      <li>heartbeat</li>
+      <li>amount of connections to other members</li>
+      <li>optime</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Election Triggering Events</h2>
+    <ul>
+      <li>Initiation of a new replica set</li>
+      <li>Secondaries loses contact with a primary</li>
+      <li>New secondary appears that has higher priority</li>
+      <li>Primary can not contact majority of members in replica set</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Simple election scenario</h2>
+    <img src="img/trigger-election.png"/>
+  </section>
+</section>
+
+
+<section>
+  <section>
     <img src="img/management.png"/>
 
     <h2>Replica set members</h2>
+
     <p>Synchronised instances possessing the same data sets</p>
   </section>
 
@@ -227,7 +264,7 @@
 
     <h2>Delayed Member</h2>
 
-    <p>Has time-shifted optlog to be used to recovery snapshots from certain errors</p>
+    <p>Has time-shifted oplog to be used to recovery snapshots from certain errors</p>
   </section>
 
   <section>
